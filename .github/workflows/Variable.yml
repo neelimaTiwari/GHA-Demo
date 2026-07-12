@@ -1,0 +1,11 @@
+name: variable
+
+on: workflow_dispatch
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print my name
+        run: echo "helo, ${{vars.MY_NAME}}
