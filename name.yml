@@ -2,20 +2,21 @@ name: printName
 
 on: push
 
-print:
+jobs:
 
-  runs-on: ubuntu-latest
+  print:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: print my name by using vari
-      run: echo "helo, ${{vars.MY_NAME}}"
+    steps:
+      - name: print my name by using vari
+        run: echo "helo, ${{vars.MY_NAME}}"
 
-test:
-  runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-  steps:
-    - name: check vari print name
-      run: echo "my name is neelima"
+    steps:
+      - name: test name is print or not
+        run: echo "my name is neelima tiwari"      
 
 
     
