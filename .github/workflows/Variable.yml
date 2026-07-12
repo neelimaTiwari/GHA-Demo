@@ -7,5 +7,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print my name
+      - name: print my name by using vari
         run: echo "helo, ${{vars.MY_NAME}}"
