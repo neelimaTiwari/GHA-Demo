@@ -1,0 +1,25 @@
+name: DeployWork
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: buils step
+        run: echo "run the buils steps"
+
+  test:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: test step
+          run: echo "run the test step"
+          
+  diploy:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: deploye step
+          run: echo "run the deploye step"
