@@ -1,6 +1,6 @@
 name: variable
 
-on: push
+on: workflow_dispatch
 
 jobs:
   print:
