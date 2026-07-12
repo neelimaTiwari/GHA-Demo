@@ -15,5 +15,14 @@ jobs:
      steps: 
        - name: test step 
          run: echo " run the test job"
+
+  diploye:
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: deploye step
+        run: echo "run the deploye step"
+    
        
  
