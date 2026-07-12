@@ -1,0 +1,11 @@
+name: variable
+
+on: push
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print my name
+        run: echo "helo, ${{vars.MY_NAME}}"
