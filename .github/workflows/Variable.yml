@@ -8,4 +8,4 @@ jobs:
 
     steps:
       - name: print my name
-        run: echo "helo, ${{vars.MY_NAME}}
+        run: echo "helo, ${{vars.MY_NAME}}"
