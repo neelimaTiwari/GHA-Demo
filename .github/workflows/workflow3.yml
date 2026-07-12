@@ -1,0 +1,20 @@
+name: workflow3
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build Step
+        run: echo "a build job"
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Test Phase
+        run: echo "run the test cases"
+        
+
