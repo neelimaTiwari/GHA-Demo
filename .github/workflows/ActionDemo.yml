@@ -1,21 +1,38 @@
-name: GitHubAction Demo
+name: Java Build
 
-on: push
+on:
+  push:
 
 jobs:
-  Action:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: checkout the code
+      # Checkout the repository
+      - name: Checkout the code
         uses: actions/checkout@v4
+
+      # Install Java
+      - name: Setup Java
+        uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
           cache: maven
 
+      # Install Maven
+      - name: Install Maven
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y maven
+
+      # Build the project
       - name: Build Project
-        run: ./mvnw clean package
-      - name : print intex.html
+        run: mvn clean package
+
+      # Print index.html
+      - name: Print index.html
         run: cat index.html
+
 
 
