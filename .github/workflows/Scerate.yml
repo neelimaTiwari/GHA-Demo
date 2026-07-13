@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print scrate
-        run: echo " hello this is my docker password {{vars.MY_PASSWORD}} "
+        run: echo " hello this is my docker password , ${{vars.MY_PASSWORD}} "
