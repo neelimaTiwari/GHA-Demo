@@ -1,0 +1,10 @@
+name: ScerateWF
+
+on: workflow_dispatch
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print scrate
+        run: echo " hello this is my docker password {{vars.MY_PASSWORD}} "
