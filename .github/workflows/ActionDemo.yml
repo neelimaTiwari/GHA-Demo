@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: checkout the code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
       - name : print intex.html
         run: cat index.html
 
