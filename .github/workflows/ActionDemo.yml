@@ -8,6 +8,13 @@ jobs:
     steps:
       - name: checkout the code
         uses: actions/checkout@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Build Project
+        run: ./mvnw clean package
       - name : print intex.html
         run: cat index.html
 
